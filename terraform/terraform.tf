@@ -26,14 +26,20 @@ terraform {
     }
   }
 
+  # backend "s3" {
+  #   bucket = "katapilar"
+  #   key    = "terraform.tfstate"
+  #   region = "us-east-2"
+  # }
   backend "s3" {
-    bucket = "gitopsterrastate"
-    key    = "terraform.tfstate"
-    region = "us-east-2"
-  }
-
-  required_version = "~> 1.6.3"
+  bucket = ""               
+  key    = "terraform.tfstate"
+  region = "us-east-2"
 }
-##
+
+
+  #required_version = "~> 1.6.3"
+  required_version = ">= 1.6.3"
+}
 ##
 ##
